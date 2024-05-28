@@ -32,6 +32,8 @@ module.exports = {
         type: Sequelize.DATE
       }
     });
+    // Create an index on the firstName column
+    await queryInterface.addIndex('Users', ['firstName']);
   },
   async down(queryInterface, Sequelize) {
     await queryInterface.dropTable('Users');
