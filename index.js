@@ -17,6 +17,7 @@ app.post('/users', async (req, res) => {
     }
 })
 
+//transaction
 app.post('/transaction', async (req, res) => {
     const { firstName, email, lastName } = req.body
     const transaction = await sequelize.transaction();
